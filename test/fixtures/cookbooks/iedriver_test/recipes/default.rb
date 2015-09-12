@@ -1,0 +1,7 @@
+include_recipe 'java_se::default'
+node.set['selenium']['windows']['java'] = 'C:\java\bin\java.exe'
+include_recipe 'selenium::hub'
+include_recipe 'iedriver::default'
+node.set['selenium']['node']['username'] = 'vagrant'
+node.set['selenium']['node']['password'] = 'vagrant'
+include_recipe 'selenium::node'
