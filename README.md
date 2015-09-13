@@ -36,25 +36,28 @@ Defaults to `true`.
 
 ### Example
 
-#### Install selenium-grid node with Internet Explorer capability
+#### Install selenium-grid node with internet explorer capability
 
 ```ruby
 include_recipe 'iedriver::default'
 
 node.set['selenium']['node']['capabilities'] = [
-   {
+  {
     browserName: 'internet explorer',
     maxInstances: 1,
+    version: ie_version,
     seleniumProtocol: 'WebDriver'
   }
 ]
-  
+node.set['selenium']['node']['username'] = 'username'
+node.set['selenium']['node']['password'] = 'password'
+
 include_recipe 'selenium::node'
 ```
 
 ## Getting Help
 
-- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/chef-iedriver).
+- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/iedriver).
 - Report bugs and discuss potential features in [Github issues](https://github.com/dhoer/chef-iedriver/issues).
 
 ## Contributing
