@@ -12,7 +12,7 @@ Installs IEDriver and configures IE.
 
 ## Requirements
 
-- Chef 11 or higher
+- Chef 12.3+
 
 ### Platforms
 
@@ -29,7 +29,7 @@ Include recipe in cookbook or run list to install IEDriver and configures IE.
 
 ### Attributes
 
-- `node['iedriver']['home']` - The location of the IE driver home directory. Defaults to `C:/iedriver`.
+- `node['iedriver']['home']` - IEDriver home directory. Defaults to `C:\iedriver`.
 - `node['iedriver']['config_ie']` - Configure Internet Explorer according to 
 [required configuration](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
 Defaults to `true`.
