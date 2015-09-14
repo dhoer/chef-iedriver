@@ -43,5 +43,5 @@ if platform?('windows')
 
   include_recipe 'iedriver::config_ie' if node['iedriver']['config_ie']
 else
-  Chef::Log.warn('IEDriverServer cannot be installed on this platform using this cookbook!')
+  Chef::Log.warn("IEDriverServer cannot be installed on #{node['platform']} platform!")
 end

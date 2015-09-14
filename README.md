@@ -29,14 +29,16 @@ Include recipe in cookbook or run list to install IEDriver and configures IE.
 
 ### Attributes
 
-- `node['iedriver']['home']` - IEDriver home directory. Defaults to `C:\iedriver`.
+- `node['chromedriver']['version']` - Version to download.
+- `node['chromedriver']['url']` -  Download URL prefix.
+- `node['iedriver']['home']` - Home directory. Default `%SYSTEMDRIVE%\iedriver`.
 - `node['iedriver']['config_ie']` - Configure Internet Explorer according to 
 [required configuration](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
-Defaults to `true`.
+Default `true`.
 
 ### Example
 
-#### Install selenium-grid node with internet explorer capability
+#### Install selenium node with internet explorer capability
 
 ```ruby
 include_recipe 'iedriver::default'
@@ -51,6 +53,7 @@ node.set['selenium']['node']['capabilities'] = [
 ]
 node.set['selenium']['node']['username'] = 'username'
 node.set['selenium']['node']['password'] = 'password'
+node.set['selenium']['node']['domain'] = 'domain'
 
 include_recipe 'selenium::node'
 ```

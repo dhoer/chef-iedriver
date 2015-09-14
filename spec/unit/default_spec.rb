@@ -3,6 +3,7 @@ require 'spec_helper'
 describe 'iedriver::default' do
   let(:chef_run) do
     ChefSpec::SoloRunner.new(file_cache_path: 'C:\chef\cache', platform: 'windows', version: '2008R2') do |node|
+      ENV['SYSTEMDRIVE'] = 'C:'
       node.set['iedriver']['version'] = '2.45.0'
       allow_any_instance_of(Chef::Recipe).to receive(:ie_version).and_return('11.0.0.0')
     end.converge(described_recipe)
