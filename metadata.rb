@@ -10,3 +10,6 @@ supports 'windows'
 
 depends 'ie', '~> 2.0'
 depends 'windows', '~> 1.0'
+
+source_url 'https://github.com/dhoer/chef-iedriver' if respond_to?(:source_url)
+issues_url 'https://github.com/dhoer/chef-iedriver/issues' if respond_to?(:issues_url)
