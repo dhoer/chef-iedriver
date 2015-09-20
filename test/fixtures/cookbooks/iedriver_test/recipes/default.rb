@@ -1,11 +1,6 @@
-# TODO: remove when selenium 3.x is released
-node.set['selenium']['windows']['java'] = 'C:\java\bin\java.exe'
-
-include_recipe 'java_se::default'
-
+include_recipe 'java_se'
 include_recipe 'selenium::hub'
-
-include_recipe 'iedriver::default'
+include_recipe 'iedriver'
 
 node.set['selenium']['node']['capabilities'] = [
   {

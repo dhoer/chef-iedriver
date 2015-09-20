@@ -2,9 +2,9 @@ name 'iedriver'
 maintainer 'Dennis Hoer'
 maintainer_email 'dennis.hoer@gmail.com'
 license 'MIT'
-description 'Installs IEDriver and configures IE'
+description 'Selenium WebDriver for Internet Explorer'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.2.0'
+version '1.0.0'
 
 supports 'windows'
 

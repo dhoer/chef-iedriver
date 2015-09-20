@@ -30,8 +30,7 @@ if platform?('windows')
     notifies :unzip, "windows_zipfile[#{iedriver_dir}]", :immediately if platform?('windows')
   end
 
-  driver_link = "#{node['iedriver']['home']}\\IEDriverServer.exe"
-  link driver_link do
+  link "#{node['iedriver']['home']}\\IEDriverServer.exe" do
     to "#{iedriver_dir}\\IEDriverServer.exe"
   end
 

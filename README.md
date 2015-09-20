@@ -1,18 +1,18 @@
-# IEDriver Cookbook
+# Selenium IEDriver Cookbook
 
 [![Cookbook Version](http://img.shields.io/cookbook/v/iedriver.svg?style=flat-square)][supermarket]
 [![Build Status](http://img.shields.io/travis/dhoer/chef-iedriver.svg?style=flat-square)][travis]
-[![GitHub Issues](http://img.shields.io/github/issues/dhoer/chef-iedriver.svg?style=flat-square)][github]
 
 [supermarket]: https://supermarket.chef.io/cookbooks/iedriver
 [travis]: https://travis-ci.org/dhoer/chef-iedriver
-[github]: https://github.com/dhoer/chef-iedriver/issues
 
-Installs IEDriver and configures IE.
+Installs IEDriverServer (https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver) and 
+configures Internet Explorer.
 
 ## Requirements
 
-- Chef 12.3+
+- Internet Explorer 9+
+- Chef 11.16+
 
 ### Platforms
 
@@ -21,11 +21,11 @@ Installs IEDriver and configures IE.
 ### Cookbooks
 
 - ie 
-- windows - used only when PowerShell 3 or greater is not installed
+- windows
 
 ## Usage
 
-Include recipe in cookbook or run list to install IEDriver and configures IE.
+Include recipe in cookbook or run list to install IEDriverServer and configure Internet Explorer.
 
 ### Attributes
 
@@ -41,7 +41,7 @@ Default `true`.
 #### Install selenium node with internet explorer capability
 
 ```ruby
-include_recipe 'iedriver::default'
+include_recipe 'iedriver'
 
 node.set['selenium']['node']['capabilities'] = [
   {
