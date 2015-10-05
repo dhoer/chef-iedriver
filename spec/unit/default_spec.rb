@@ -38,8 +38,9 @@ describe 'iedriver::default' do
     )
   end
 
-  it 'adds driver to path' do
-    expect(chef_run).to modify_env('PATH').with(
+  it 'adds iedriver to path' do
+    expect(chef_run).to modify_env('Add iedriver to path').with(
+      key_name: 'PATH',
       value: 'C:\iedriver'
     )
   end

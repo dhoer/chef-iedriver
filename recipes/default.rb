@@ -34,7 +34,8 @@ if platform?('windows')
     to "#{iedriver_dir}\\IEDriverServer.exe"
   end
 
-  env 'PATH' do
+  env 'Add iedriver to path' do
+    key_name 'PATH'
     action :modify
     delim ::File::PATH_SEPARATOR
     value node['iedriver']['home']
