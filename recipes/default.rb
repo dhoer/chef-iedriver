@@ -30,6 +30,14 @@ if platform?('windows')
     notifies :unzip, "windows_zipfile[#{iedriver_dir}]", :immediately if platform?('windows')
   end
 
+  name = 'Command line server for the IE Driver'
+  execute "Firewall rule '#{name}'" do
+    command "netsh advfirewall firewall add rule name=\"#{name}\" dir=in profile=private"\
+    " action=allow program=\"#{iedriver_dir}\\IEDriverServer.exe\""
+    action :run
+    not_if "netsh advfirewall firewall show rule name=\"#{name}\" > nul"
+  end
+
   link "#{node['iedriver']['home']}\\IEDriverServer.exe" do
     to "#{iedriver_dir}\\IEDriverServer.exe"
   end

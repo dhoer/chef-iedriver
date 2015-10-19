@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+- Fix #2 IEDriver on Windows 10 is getting 'Windows firewall has blocked some of the features of this app' 
+
 ## 1.1.0
 
 - IEDriver release 2.48.0

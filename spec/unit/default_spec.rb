@@ -6,6 +6,8 @@ describe 'iedriver::default' do
       ENV['SYSTEMDRIVE'] = 'C:'
       node.set['iedriver']['version'] = '2.45.0'
       allow_any_instance_of(Chef::Recipe).to receive(:ie_version).and_return('11.0.0.0')
+      stub_command(
+        "netsh advfirewall firewall show rule name=\"Command line server for the IE Driver\" > nul").and_return(false)
     end.converge(described_recipe)
   end
 
@@ -29,6 +31,13 @@ describe 'iedriver::default' do
   it 'unzips via window_zipfile' do
     expect(chef_run).to_not unzip_windows_zipfile_to('C:\iedriver\iedriver-2.45.0').with(
       source: 'C:\chef\cache\IEDriverServer_x64_2.45.0.zip'
+    )
+  end
+
+  it 'adds command line firewall rule' do
+    expect(chef_run).to run_execute("Firewall rule 'Command line server for the IE Driver'").with(
+      command: 'netsh advfirewall firewall add rule name="Command line server for the IE Driver"'\
+      ' dir=in profile=private action=allow program="C:\\iedriver\\iedriver-2.45.0\\IEDriverServer.exe"'
     )
   end
 
