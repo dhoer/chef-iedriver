@@ -7,7 +7,7 @@ include_recipe 'ie::bfcache' if major_version >= 11
 
 include_recipe 'ie::esc' # disable annoying enhanced security configuration
 
-include_recipe 'ie::firstrun' if major_version == 9 || major_version == 8
+include_recipe 'ie::firstrun'
 
 # On IE 7 or higher, you must set the Protected Mode settings for each zone to be the same value.
 # The value can be on or off, as long as it is the same or every zone.
