@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 - 2015/01/28
+
+- IEDriver release 2.50.0
+
 ## 1.1.2
 
 - Fix #3 Enable first run for all browser versions

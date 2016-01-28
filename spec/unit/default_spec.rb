@@ -7,7 +7,7 @@ describe 'iedriver::default' do
       node.set['iedriver']['version'] = '2.45.0'
       allow_any_instance_of(Chef::Recipe).to receive(:ie_version).and_return('11.0.0.0')
       stub_command(
-        "netsh advfirewall firewall show rule name=\"Command line server for the IE Driver\" > nul").and_return(false)
+        'netsh advfirewall firewall show rule name="Command line server for the IE Driver" > nul').and_return(false)
     end.converge(described_recipe)
   end
 
@@ -22,7 +22,7 @@ describe 'iedriver::default' do
 
   it 'unzips via powershell' do
     expect(chef_run).to_not run_batch('unzip iedriver')
-      .with(code: "powershell.exe -nologo -noprofile -command \"& { Add-Type -A "\
+      .with(code: 'powershell.exe -nologo -noprofile -command "& { Add-Type -A '\
       "'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::ExtractToDirectory("\
       "'C:/chef/cache/IEDriverServer_x64_2.45.0.zip', "\
       "'C:/iedriver/iedriver-2.45.0'); }\"")

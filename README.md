@@ -29,8 +29,8 @@ Include recipe in cookbook or run list to install IEDriverServer and configure I
 
 ### Attributes
 
-- `node['chromedriver']['version']` - Version to download.
-- `node['chromedriver']['url']` -  Download URL prefix.
+- `node['iedriver']['version']` - Version to download.
+- `node['iedriver']['url']` -  Download URL prefix.
 - `node['iedriver']['home']` - Home directory. Default `%SYSTEMDRIVE%\iedriver`.
 - `node['iedriver']['config_ie']` - Configure Internet Explorer according to 
 [required configuration](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
