@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 2016-02-18
+
+- IEDriver release 2.52.0
+
 ## 1.3.0 2016-02-10
 
 - IEDriver release 2.51.0

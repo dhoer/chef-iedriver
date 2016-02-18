@@ -60,7 +60,7 @@ include_recipe 'selenium::node'
 
 ## Getting Help
 
-- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/iedriver).
+- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/ie+webdriver).
 - Report bugs and discuss potential features in [Github issues](https://github.com/dhoer/chef-iedriver/issues).
 
 ## Contributing
