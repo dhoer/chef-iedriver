@@ -1,10 +1,10 @@
 # Selenium IEDriver Cookbook
 
 [![Cookbook Version](http://img.shields.io/cookbook/v/iedriver.svg?style=flat-square)][supermarket]
-[![Build Status](http://img.shields.io/travis/dhoer/chef-iedriver.svg?style=flat-square)][travis]
+[![win](https://img.shields.io/appveyor/ci/dhoer/chef-iedriver/master.svg?style=flat-square)][win]
 
 [supermarket]: https://supermarket.chef.io/cookbooks/iedriver
-[travis]: https://travis-ci.org/dhoer/chef-iedriver
+[win]: https://ci.appveyor.com/project/dhoer/chef-iedriver
 
 Installs IEDriverServer (https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver) and 
 configures Internet Explorer.
