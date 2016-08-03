@@ -1,14 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'foodcritic', '~> 5.0'
-gem 'rubocop', '~> 0.34'
-gem 'chefspec', '~> 4.2'
-gem 'berkshelf', '~> 3.1.5'
+gem 'foodcritic'
+gem 'rubocop'
+gem 'chefspec'
 gem 'chef', '~> 11.16'
-gem 'faraday', '= 0.9.1' # prevent ridley middleware gzip `initialize': not in gzip format (Zlib::GzipFile::Error)
+gem 'berkshelf', '~> 4.0'
 
 group :integration do
-  gem 'test-kitchen', '~> 1.4'
-  gem 'kitchen-vagrant', '~> 0.18'
+  gem 'test-kitchen', '~> 1.7'
+  gem 'winrm-fs', '~> 0.3'
+  gem 'kitchen-localhost', '~> 0.0'
+  gem 'kitchen-vagrant', '~> 0.20'
   gem 'winrm-transport', '~> 1.0'
 end
