@@ -7,7 +7,8 @@ describe 'iedriver::default' do
       node.set['iedriver']['version'] = '2.45.0'
       allow_any_instance_of(Chef::Recipe).to receive(:ie_version).and_return('11.0.0.0')
       stub_command(
-        'netsh advfirewall firewall show rule name="Command line server for the IE Driver" > nul').and_return(false)
+        'netsh advfirewall firewall show rule name="Command line server for the IE Driver" > nul'
+      ).and_return(false)
     end.converge(described_recipe)
   end
 
@@ -17,7 +18,8 @@ describe 'iedriver::default' do
 
   it 'downloads driver' do
     expect(chef_run).to create_remote_file('C:\chef\cache\IEDriverServer_x64_2.45.0.zip').with(
-      source: 'https://selenium-release.storage.googleapis.com/2.45/IEDriverServer_x64_2.45.0.zip')
+      source: 'https://selenium-release.storage.googleapis.com/2.45/IEDriverServer_x64_2.45.0.zip'
+    )
   end
 
   it 'unzips via powershell' do
