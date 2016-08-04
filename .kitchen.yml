@@ -18,3 +18,7 @@ suites:
     run_list:
       - recipe[iedriver_test::default]
     attributes:
+      selenium:
+        node:
+          username: vagrant
+          password: vagrant

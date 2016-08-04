@@ -19,3 +19,7 @@ suites:
     run_list:
       - iedriver_test::default
     attributes:
+      selenium:
+        node:
+          username: <%= ENV["machine_user"] %>
+          password: <%= ENV["machine_pass"] %>

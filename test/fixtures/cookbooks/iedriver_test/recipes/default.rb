@@ -10,7 +10,7 @@ node.default['selenium']['node']['capabilities'] = [
     seleniumProtocol: 'WebDriver'
   }
 ]
-node.default['selenium']['node']['username'] = 'vagrant'
-node.default['selenium']['node']['password'] = 'vagrant'
+# node.default['selenium']['node']['username'] = 'vagrant'
+# node.default['selenium']['node']['password'] = 'vagrant'
 
 include_recipe 'selenium::node'
