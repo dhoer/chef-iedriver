@@ -43,7 +43,7 @@ Default `true`.
 ```ruby
 include_recipe 'iedriver'
 
-node.set['selenium']['node']['capabilities'] = [
+node.default['selenium']['node']['capabilities'] = [
   {
     browserName: 'internet explorer',
     maxInstances: 1,
@@ -51,9 +51,9 @@ node.set['selenium']['node']['capabilities'] = [
     seleniumProtocol: 'WebDriver'
   }
 ]
-node.set['selenium']['node']['username'] = 'username'
-node.set['selenium']['node']['password'] = 'password'
-node.set['selenium']['node']['domain'] = 'domain'
+node.default['selenium']['node']['username'] = 'username'
+node.default['selenium']['node']['password'] = 'password'
+node.default['selenium']['node']['domain'] = 'domain'
 
 include_recipe 'selenium::node'
 ```

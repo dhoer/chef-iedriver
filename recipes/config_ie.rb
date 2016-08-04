@@ -12,20 +12,20 @@ include_recipe 'ie::firstrun'
 # On IE 7 or higher, you must set the Protected Mode settings for each zone to be the same value.
 # The value can be on or off, as long as it is the same or every zone.
 if major_version >= 7
-  node.set['ie']['zone']['internet'] = {
+  node.default['ie']['zone']['internet'] = {
     '1400' => 0, # enable active scripting
     '2500' => 0 # enable protected mode
   }
 
-  node.set['ie']['zone']['local_internet'] = {
+  node.default['ie']['zone']['local_internet'] = {
     '2500' => 0 # enable protected mode
   }
 
-  node.set['ie']['zone']['trusted_sites'] = {
+  node.default['ie']['zone']['trusted_sites'] = {
     '2500' => 0 # enable protected mode
   }
 
-  node.set['ie']['zone']['restricted_sites'] = {
+  node.default['ie']['zone']['restricted_sites'] = {
     '2500' => 0 # enable protected mode
   }
 

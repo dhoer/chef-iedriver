@@ -2,7 +2,7 @@ include_recipe 'java_se'
 include_recipe 'selenium::hub'
 include_recipe 'iedriver'
 
-node.set['selenium']['node']['capabilities'] = [
+node.default['selenium']['node']['capabilities'] = [
   {
     browserName: 'internet explorer',
     maxInstances: 1,
@@ -10,7 +10,7 @@ node.set['selenium']['node']['capabilities'] = [
     seleniumProtocol: 'WebDriver'
   }
 ]
-node.set['selenium']['node']['username'] = 'vagrant'
-node.set['selenium']['node']['password'] = 'vagrant'
+node.default['selenium']['node']['username'] = 'vagrant'
+node.default['selenium']['node']['password'] = 'vagrant'
 
 include_recipe 'selenium::node'
