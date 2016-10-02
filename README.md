@@ -12,7 +12,7 @@ configures Internet Explorer.
 ## Requirements
 
 - Internet Explorer 9+
-- Chef 11.16+
+- Chef 12.6+
 
 ### Platforms
 
@@ -20,8 +20,7 @@ configures Internet Explorer.
 
 ### Cookbooks
 
-- ie 
-- windows
+- ie
 
 ## Usage
 

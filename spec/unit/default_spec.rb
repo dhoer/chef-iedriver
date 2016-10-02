@@ -23,17 +23,7 @@ describe 'iedriver::default' do
   end
 
   it 'unzips via powershell' do
-    expect(chef_run).to_not run_batch('unzip iedriver')
-      .with(code: 'powershell.exe -nologo -noprofile -command "& { Add-Type -A '\
-      "'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::ExtractToDirectory("\
-      "'C:/chef/cache/IEDriverServer_x64_2.45.0.zip', "\
-      "'C:/iedriver/iedriver-2.45.0'); }\"")
-  end
-
-  it 'unzips via window_zipfile' do
-    expect(chef_run).to_not unzip_windows_zipfile_to('C:\iedriver\iedriver-2.45.0').with(
-      source: 'C:\chef\cache\IEDriverServer_x64_2.45.0.zip'
-    )
+    expect(chef_run).to_not run_powershell_script('unzip C:\chef\cache\IEDriverServer_x64_2.45.0.zip')
   end
 
   it 'adds command line firewall rule' do

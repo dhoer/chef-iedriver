@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0 2016-10-01
+
+- Drop support for Chef 11
+
 ## 1.5.1 2016-08-03
 
 - IEDriver release 2.53.1
