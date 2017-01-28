@@ -12,4 +12,4 @@ chef_version '>= 12.6'
 
 supports 'windows'
 
-depends 'ie', '~> 2.0'
+depends 'ie', '>= 2.0'

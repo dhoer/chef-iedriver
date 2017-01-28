@@ -4,3 +4,6 @@ AllCops:
 
 LineLength:
   Max: 120
+
+BlockLength:
+  Enabled: false
