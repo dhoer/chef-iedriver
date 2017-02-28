@@ -8,5 +8,5 @@ version '0.1.0'
 
 depends 'iedriver'
 depends 'java_se', '~> 8.0'
-depends 'selenium', '~> 3.0'
-depends 'nssm', '~> 1.2'
+depends 'selenium'
+depends 'nssm'
