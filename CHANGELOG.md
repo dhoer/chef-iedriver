@@ -1,4 +1,7 @@
 # Changelog
+## 2.2.1 2017-12-15
+
+- New attribute `node['iedriver']['forcex86']` added, which controls whether to force a 32-bit install of IEDriver
 
 ## 2.2.0 2017-02-27
 
@@ -38,7 +41,7 @@
 
 ## 1.1.1
 
-- Fix #2 IEDriver on Windows 10 is getting 'Windows firewall has blocked some of the features of this app' 
+- Fix #2 IEDriver on Windows 10 is getting 'Windows firewall has blocked some of the features of this app'
 
 ## 1.1.0
 

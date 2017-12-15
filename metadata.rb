@@ -6,7 +6,7 @@ description 'Selenium WebDriver for Internet Explorer'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url 'https://github.com/dhoer/chef-iedriver'
 issues_url 'https://github.com/dhoer/chef-iedriver/issues'
-version '2.2.0'
+version '2.2.1'
 
 chef_version '>= 12.6'
 

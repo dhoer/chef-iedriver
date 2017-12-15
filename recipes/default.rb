@@ -6,7 +6,12 @@ if platform?('windows')
     action :create
   end
 
-  bit = node['kernel']['machine'] == 'x86_64' ? 'x64' : 'Win32'
+  if node['iedriver']['forcex86'] == false
+      bit = node['kernel']['machine'] == 'x86_64' ? 'x64' : 'Win32'
+  else
+      bit = 'Win32'
+  end
+
   zip = "#{Chef::Config[:file_cache_path]}\\IEDriverServer_#{bit}_#{version}.zip"
 
   powershell_script "unzip #{zip}" do
