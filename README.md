@@ -34,7 +34,7 @@ Include recipe in cookbook or run list to install IEDriverServer and configure I
 - `node['iedriver']['config_ie']` - Configure Internet Explorer according to
 [required configuration](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
 Default `true`.
-- `node['iedriver']['forcex86']` - Forces 32 bit iedriver download. Default false
+- `node['iedriver']['forcex86']` - Forces 32 bit iedriver download. Default false. If you have already ran this cookbook you will need to delete `%SYSTEMDRIVE%\iedriver` before running. 
 
 ### Example
 
