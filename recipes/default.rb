@@ -12,12 +12,6 @@ if platform?('windows')
             'Win32'
         end
 
-  # if node['iedriver']['forcex86'] == false
-  #     bit = node['kernel']['machine'] == 'x86_64' ? 'x64' : 'win32'
-  # else
-  #     bit = 'win32'
-  # end
-
   zip = "#{Chef::Config[:file_cache_path]}\\IEDriverServer_#{bit}_#{version}.zip"
 
   powershell_script "unzip #{zip}" do
