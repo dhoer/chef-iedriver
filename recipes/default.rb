@@ -7,10 +7,10 @@ if platform?('windows')
   end
 
 bit = if node['iedriver']['forcex86'] == false
-        node['kernel']['machine'] == 'x86_64' ? 'x64' : 'Win32'
-    else
-        'Win32'
-    end
+          node['kernel']['machine'] == 'x86_64' ? 'x64' : 'Win32'
+      else
+          'Win32'
+      end
 
   zip = "#{Chef::Config[:file_cache_path]}\\IEDriverServer_#{bit}_#{version}.zip"
 
