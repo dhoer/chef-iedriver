@@ -6,7 +6,7 @@
 [supermarket]: https://supermarket.chef.io/cookbooks/iedriver
 [win]: https://ci.appveyor.com/project/dhoer/chef-iedriver
 
-Installs IEDriverServer (https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver) and 
+Installs IEDriverServer (https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver) and
 configures Internet Explorer.
 
 ## Requirements
@@ -31,9 +31,10 @@ Include recipe in cookbook or run list to install IEDriverServer and configure I
 - `node['iedriver']['version']` - Version to download.
 - `node['iedriver']['url']` -  Download URL prefix.
 - `node['iedriver']['home']` - Home directory. Default `%SYSTEMDRIVE%\iedriver`.
-- `node['iedriver']['config_ie']` - Configure Internet Explorer according to 
+- `node['iedriver']['config_ie']` - Configure Internet Explorer according to
 [required configuration](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
 Default `true`.
+- `node['iedriver']['forcex86']` - Forces 32 bit iedriver download. Default false. If you have already ran this cookbook you will need to delete `%SYSTEMDRIVE%\iedriver` before running. 
 
 ### Example
 
